@@ -1,4 +1,4 @@
-FROM dockerpedia/pegasus_workflow_images
+FROM dockerpedia/pegasus_workflow_images:pegasus-4.8.5
 
 USER root
 RUN apt-get install zlib1g-dev libncurses5-dev -y
