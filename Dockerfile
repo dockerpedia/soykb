@@ -21,4 +21,5 @@ RUN mkdir -p soykb/ && \
     ln -s ~/.ssh/id_rsa ~/.ssh/workflow && \
     rm /home/workflow/software.tar.gz /home/workflow/soykb.tar.gz
 
+ADD workflow-generator soykb/
 USER root
