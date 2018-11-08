@@ -1,5 +1,17 @@
 FROM dockerpedia/pegasus_workflow_images:pegasus-4.8.5
 
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="Soybean Knowledge Base" \
+      org.label-schema.description="The SoyKB  workflow is a genomics pipeline that re-sequences soybean germplasm lines selected for desirable traits such as oil, protein, soybean cyst nematode resistance, stress resistance, and root system architecture" \
+      org.label-schema.url="http://www.soykb.org/" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/dockerpedia/soykb" \
+      org.label-schema.vendor="DockerPedia" \
+      org.label-schema.version="1.0" \
+      org.label-schema.schema-version="1.0"
+
 USER workflow
 
 #Install SoyKb
@@ -22,4 +34,5 @@ RUN mkdir -p soykb/ && \
     rm /home/workflow/software.tar.gz /home/workflow/soykb.tar.gz
 
 ADD workflow-generator soykb/
+
 USER root
