@@ -2,10 +2,14 @@
 
 ### How to run
 
-First, you must run the container
+First, you must run the container.
 
 ```
-docker run -d --rm -it --name soybean mosorio/pegasus_workflow_images:soykb
+docker run --detach \
+        --interactive \
+        --tty \
+        --name soybean \
+        mosorio/pegasus_workflow_images:soykb
 ```
 
 Next, you must enter the container. You can confirm that you are inside of the container by the prompt
