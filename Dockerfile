@@ -11,6 +11,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vendor="DockerPedia" \
       org.label-schema.version="1.0" \
       org.label-schema.schema-version="1.0"
+      org.label-schema.docker.cmd="docker run -d -ti --name soybean mosorio/pegasus_workflow_images:soykb"
 
 USER workflow
 
