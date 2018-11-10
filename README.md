@@ -9,7 +9,7 @@ docker run --detach \
         --interactive \
         --tty \
         --name soybean \
-        mosorio/pegasus_workflow_images:soykb
+        dockerpedia/soykb:latest
 ```
 
 Next, you must enter the container. You can confirm that you are inside of the container by the prompt
